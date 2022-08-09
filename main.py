@@ -244,8 +244,8 @@ async def wiki(e):
 
         #manga
 @client.on(events.NewMessage(pattern=".manga ?(.*)"))
-async def manga(evwnt):
-    msg = await evwnt.edit("`qidirilmoqda ...`")
+async def manga(event):
+    msg = await event.edit("`qidirilmoqda ...`")
     keyword = event.pattern_match.group(1)
     if keyword is None:
         return await msg.edit("`qidirish uchun anime nomini yozing`")
